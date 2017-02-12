@@ -1,4 +1,5 @@
-* {
+
+body {
 	margin: 0 auto;
 }
 
@@ -46,14 +47,16 @@ nav ul li {
 header {
 	padding-top: 10%;
 	background-color: #fafafa;
+	display: inline-block;
 }
 
 .search {
 	float: right;
-	margin-right: 5%;
+	margin-right: 50px;
 	text-align: center;
-	padding: 1%;
+	padding: 10px 30px;
 	background-color: #efefed;
+	margin-top: 10px;
 
 }
 
@@ -64,51 +67,112 @@ input {
 
 }
 
-.left {
+header .left {
 	float: left;
 	display: inline-block;
+	width: 50%
 }
 
-.right{
+header .left img {
+	float: left;
+	display: inline-block;
+	padding-top: 80px;
+	width: 90%;
+	height: 90%;
+}
+
+header .right{
 	display: inline-block;
 	color: #fe7e00;
-	font-size: 35px;
+	font-size: 2.30em;
 	float: right;
-	margin-right: 8%;
 	font-family: 'Pangolin';
 	line-height: 60px;
-	padding-top: 4%;
+	width: 50%;
 }
+
+header .right div {
+	padding-right: 50px;
+	padding-top: 50px;
+	height: 90%;
+}
+
 
 .right .search {
 	margin-right: 0;
 }
 
 
-.button {
+.blue {
     background-color: #fe7e00;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 50px;
+    margin-bottom: 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+
 }
-.but {
+.orange {
 	background-color: #79CBC6;
 	border: none;
 	color: white;
-	padding: 15px 32px;
+	padding: 10px 50px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	margin-bottom: 50px;
 }
 
 
-}
 footer {
-	color: #79CBC6;
-	height: 5%;
+	background-color: #79CBC6;
+	height: 90px;
 }
+
+i {
+	color: lightgrey;
+}
+
+/*==========================================================================
+				MEDIA QUERIES
+==========================================================================*/
+@media (max-width: 1015px) {
+	header .left img {
+		padding-top: 30%;
+	}
+}
+@media (max-width: 830px) {
+	header .left {
+		width: 100%;
+	}
+
+	header .left img {
+		width: 100%;
+		padding-top: 10%;
+	}
+	header .right {
+		width: 100%;
+		text-align: center;
+	}
+	header .right div {
+		padding: 0;
+	}
+
+}
+
+@media (max-width: 650px) {
+	.search {
+		display: none;
+	}
+	nav ul{
+		display: none;
+	}
+	header .right{
+		font-size: 2em;
+	}
+
+}	
